@@ -93,6 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('box3').addEventListener('click', () => {
-        window.location.href = 'https://github.com';
+        window.location.href = 'https://github.com/Anthony-Leon6/WebCOMBO-Gen';
     });
 });
