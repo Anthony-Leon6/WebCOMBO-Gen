@@ -35,13 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const terminal = document.getElementById('terminal');
     let lastNumber = 0;
-    // Create Again button
     const againBtn = document.createElement('button');
     againBtn.textContent = 'Again';
     againBtn.classList.add('control-button');
     againBtn.style.display = 'none';
     document.body.insertBefore(againBtn, terminal);
-    // Again button functionality
     againBtn.addEventListener('click', () => {
         if (lastNumber > 0) {
             const possibilities = generatePossibilities(lastNumber);
