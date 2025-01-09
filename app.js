@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('commandInput').addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
-            terminal.innerHTML = ''; // Clear previous content
+            terminal.innerHTML = ''; 
             const command = event.target.value;
             const num = parseInt(command, 10);
             if (!isNaN(num)) {
