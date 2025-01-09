@@ -9,7 +9,6 @@ function generateCombinations(arr) {
     f([], arr);
     return result;
 }
-
 const style = document.createElement('style');
 style.innerHTML = `
     #terminal {
@@ -26,7 +25,6 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
-
 document.addEventListener('DOMContentLoaded', () => {
     function generatePossibilities(num) {
         const result = [];
@@ -35,17 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return result;
     }
-
     const terminal = document.getElementById('terminal');
     let lastNumber = 0;
-
     // Create Again button
     const againBtn = document.createElement('button');
     againBtn.textContent = 'Again';
     againBtn.classList.add('control-button');
     againBtn.style.display = 'none';
     document.body.insertBefore(againBtn, terminal);
-
     // Again button functionality
     againBtn.addEventListener('click', () => {
         if (lastNumber > 0) {
@@ -54,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             terminal.textContent = combinations.map(c => c.join(',')).join(' | ');
         }
     });
-
     document.getElementById('generate').addEventListener('click', () => {
         terminal.innerHTML = ''; // Clear previous content
         const num = parseInt(document.getElementById('numberInput').value, 10);
@@ -74,8 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
             event.target.value = '';
         }
     });
-
-    // Start over button functionality
     const startOverBtn = document.createElement('button');
     startOverBtn.textContent = 'Start Over';
     startOverBtn.classList.add('control-button');
@@ -83,15 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
         location.reload();
     });
     document.body.insertBefore(startOverBtn, terminal);
-
     document.getElementById('box1').addEventListener('click', () => {
         window.location.href = 'https://example.com';
     });
-
     document.getElementById('box2').addEventListener('click', () => {
         window.location.href = 'https://telegram.org';
     });
-
     document.getElementById('box3').addEventListener('click', () => {
         window.location.href = 'https://github.com/Anthony-Leon6/WebCOMBO-Gen';
     });
