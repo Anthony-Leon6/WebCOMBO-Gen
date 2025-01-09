@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glowing Link Boxes with Terminal</title>
+    <title>Combonative Terminal</title>
     <style>
     #terminal {
             background-color: black;
@@ -174,7 +174,7 @@
     }
     function clearTerminal() {
         const terminal = document.getElementById('terminal');
-        terminal.innerHTML = '<input type="text" class="command-input" id="commandInput" placeholder="Enter Number For All Possible Combinations...">';
+        terminal.innerHTML = '<input type="text" class="command-input" id="commandInput" placeholder="Enter Numbers/Letters 4 Combo's.....">';
         attachEventListener();
     }
     function attachEventListener() {
@@ -220,7 +220,7 @@
     function clearTerminal() {
         const terminal = document.getElementById('terminal');
         const restartButton = document.getElementById('restartButton');
-        terminal.innerHTML = '<input type="text" class="command-input" id="commandInput" placeholder="Enter Number For All Possible Combinations...">';
+        terminal.innerHTML = '<input type="text" class="command-input" id="commandInput" placeholder="Enter Numbers/Letters 4 Combo's.....">';
         terminal.appendChild(restartButton);
         attachEventListener();
     }
