@@ -18,7 +18,7 @@
             color: lime;
             border: 1px solid lime;
             padding: 5px;
-            width: calc(100% - 12px); /* Adjust width to fit inside the terminal */
+            width: calc(100% - 12px); 
         }
         body {
             background: url('giphy.gif') no-repeat center center fixed;
@@ -127,7 +127,6 @@
             <button onclick="copyToClipboard()">Copy</button>
         </div>
     </div>
-
     <script src="app.js"></script>
     <script>
         async function copyToClipboard() {
@@ -139,7 +138,6 @@
                 alert('Failed to copy text: ' + err);
             }
         }
-
         document.getElementById('commandInput').addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
                 const command = event.target.value;
@@ -147,7 +145,6 @@
                 event.target.value = '';
             }
         });
-
         function executeCommand(command) {
             const terminal = document.getElementById('terminal');
             const result = generatePossibilities(command);
@@ -157,8 +154,6 @@
         }
 
         function generatePossibilities(number) {
-            // Example function to generate possibilities of a given number
-            // This should be replaced with the actual logic you need
             const possibilities = [];
             for (let i = 0; i <= number; i++) {
                 possibilities.push(i);
@@ -184,7 +179,6 @@
         terminal.innerHTML = '<input type="text" class="command-input" id="commandInput" placeholder="Enter Number For All Possible Combinations...">';
         attachEventListener();
     }
-
     function attachEventListener() {
         document.getElementById('commandInput').addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
@@ -194,7 +188,6 @@
             }
         });
     }
-
     function executeCommand(command) {
         const terminal = document.getElementById('terminal');
         const result = generatePermutations(command);
@@ -202,7 +195,6 @@
         resultElement.textContent = result.join('\n');
         terminal.appendChild(resultElement);
     }
-
     function generatePermutations(str) {
         str = str.toString();
         const results = [];
@@ -217,8 +209,6 @@
         }
         return results;
     }
-
-    // Initial setup of restart button
     function setupRestartButton() {
         const terminal = document.getElementById('terminal');
         const restartButton = document.createElement('button');
@@ -228,8 +218,6 @@
         restartButton.onclick = clearTerminal;
         terminal.appendChild(restartButton);
     }
-
-    // Modify clearTerminal function to preserve the button
     function clearTerminal() {
         const terminal = document.getElementById('terminal');
         const restartButton = document.getElementById('restartButton');
@@ -237,8 +225,6 @@
         terminal.appendChild(restartButton);
         attachEventListener();
     }
-
-    // Initial setup
     setupRestartButton();
     attachEventListener();
 </script></script>
